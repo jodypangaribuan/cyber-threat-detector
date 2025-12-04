@@ -66,6 +66,4 @@ share/python-wheels/
 *.egg
 MANIFEST
 *.sqlite3
-*.h5
-*.model
 
