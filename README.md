@@ -123,12 +123,10 @@ The frontend provides the user interface.
 
 ## 👥 Team
 
--   **Alex Chen** - Lead AI Engineer
--   **Sarah Johnson** - Security Analyst
--   **Michael Ross** - Full Stack Developer
--   **Emily Zhang** - Data Scientist
--   **David Patel** - DevOps Engineer
+-   **Jody Edriano Pangaribuan**
+-   **Anjelika Simamora**
+-   **Cheryl Lovica**
+-   **Bowo Manalu**
+-   **Chenith Siro**
 
----
-
-Built with ❤️ by the CyberThreat Detector Team.
+![Team](public/all_team.png)

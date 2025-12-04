@@ -4,34 +4,29 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const teamMembers = [
     {
-        name: "Alex Chen",
-        role: "Lead AI Engineer",
-        bio: "Specializes in deep learning and neural network architectures for cybersecurity.",
-        initials: "AC"
+        name: "Jody Edriano Pangaribuan",
+        initials: "JP",
+        bio: "Kang koding yang hobi begadang. Kalau program error, bilangnya 'ini fitur tersembunyi, bukan bug'."
     },
     {
-        name: "Sarah Johnson",
-        role: "Security Analyst",
-        bio: "10+ years of experience in network forensics and threat hunting.",
-        initials: "SJ"
+        name: "Anjelika Simamora",
+        initials: "AS",
+        bio: "Pawang UI/UX. Kalau tombol geser 1 pixel aja, langsung tantrum seharian."
     },
     {
-        name: "Michael Ross",
-        role: "Full Stack Developer",
-        bio: "Expert in building scalable web applications and real-time dashboards.",
-        initials: "MR"
+        name: "Cheryl Lovica",
+        initials: "CL",
+        bio: "Spesialis debug sambil ngopi. Kopinya habis, errornya malah nambah."
     },
     {
-        name: "Emily Zhang",
-        role: "Data Scientist",
-        bio: "Focuses on feature engineering and dataset optimization for ML models.",
-        initials: "EZ"
+        name: "Bowo Manalu",
+        initials: "BM",
+        bio: "Penjaga server biar gak meledak. Cita-cita jadi hacker, tapi takut dosa."
     },
     {
-        name: "David Patel",
-        role: "DevOps Engineer",
-        bio: "Ensures smooth deployment and infrastructure security.",
-        initials: "DP"
+        name: "Chenith Siro",
+        initials: "CS",
+        bio: "Ahli data yang bisa baca pikiran user, tapi kadang gak bisa baca kode sendiri."
     }
 ];
 
@@ -41,7 +36,7 @@ export default function TeamPage() {
             <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight">Meet the Team</h1>
                 <p className="text-xl text-muted-foreground">
-                    The brilliant minds behind CyberThreat Detector.
+                    The brilliant minds (and comedians) behind CyberThreat Detector.
                 </p>
             </div>
 
@@ -57,11 +52,10 @@ export default function TeamPage() {
                                 </Avatar>
                             </div>
                             <CardTitle className="text-xl">{member.name}</CardTitle>
-                            <CardDescription className="text-primary font-medium">{member.role}</CardDescription>
                         </CardHeader>
                         <CardContent className="text-center space-y-4">
-                            <p className="text-sm text-muted-foreground leading-relaxed">
-                                {member.bio}
+                            <p className="text-sm text-muted-foreground leading-relaxed italic">
+                                "{member.bio}"
                             </p>
                             <div className="flex justify-center gap-4 text-muted-foreground pt-2">
                                 <Github className="w-5 h-5 hover:text-foreground cursor-pointer transition-colors" />
