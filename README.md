@@ -1,105 +1,148 @@
-# 🛡️ CyberThreat Detector
+<div align="center">
+  <h1>CyberThreat Detector</h1>
+</div>
 
-CyberThreat Detector is a real-time network traffic analysis tool powered by Deep Learning. It uses a Convolutional Neural Network (CNN) to detect and classify various network threats such as DDoS, Ransomware, and Brute Force attacks.
+<div align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Status" src="https://img.shields.io/badge/Status-Active%20Development-yellow?style=flat-square" />
+  <img alt="Platform" src="https://img.shields.io/badge/Platform-Web-lightgrey?style=flat-square" />
+</div>
 
-![Project Banner](public/image.png)
+<br />
 
-## ✨ Features
+<div align="center">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js%2014-black?style=flat-square&logo=next.js&logoColor=white" />
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js%2018+-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+  <img alt="Python" src="https://img.shields.io/badge/Python%203.9+-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img alt="Flask" src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" />
+  <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+</div>
 
--   **Real-time Traffic Analysis**: Capture and analyze live network packets from your machine.
--   **AI-Powered Detection**: Utilizes a trained CNN model to classify traffic with high accuracy.
--   **Interactive Dashboard**: Beautiful, responsive UI built with Next.js and Tailwind CSS.
--   **Detailed Insights**: View confidence scores, threat levels, and actionable advice.
+<br />
 
-## 🛠️ Tech Stack
+<p align="center">
+  <strong>A real-time network traffic analysis tool powered by Deep Learning, designed to detect and classify various network threats.</strong>
+</p>
 
--   **Frontend**: Next.js 14, React, Tailwind CSS, Framer Motion, Lucide Icons.
--   **Backend**: Flask (Python), TensorFlow/Keras, Scikit-learn, Scapy.
--   **Model**: Convolutional Neural Network (CNN) trained on the CyberFedDefender dataset.
+<br />
+
+<p align="center">
+  <img src="public/image.png" alt="CyberThreat Detector Banner" width="800"/>
+</p>
+
+## Executive Summary
+
+**CyberThreat Detector** is an advanced network security tool that provides a real-time network traffic analysis powered by Deep Learning. The platform utilizes a **Convolutional Neural Network (CNN)** to independently detect and classify various network threats such as DDoS, Ransomware, and Brute Force attacks. 
+
+## Key Features
+
+- **🌐 Real-time Traffic Analysis**: Capture and analyze live network packets from your machine securely.
+- **🧠 AI-Powered Detection**: Utilizes a trained CNN model to classify network traffic with high accuracy and speed.
+- **🖥️ Interactive Dashboard**: Enjoy a beautiful, responsive, and dynamic user interface built with Next.js and Tailwind CSS.
+- **📊 Detailed Insights**: Access comprehensive information including model confidence scores, detailed threat levels, and intelligent, actionable advice.
 
 ---
 
-## 🚀 Getting Started
+## Tech Stack & Core Systems
 
-Follow these steps to set up and run the project locally.
+| Category | Technology |
+| --- | --- |
+| **Frontend Web** | Next.js 14, React, Tailwind CSS, Framer Motion, Lucide Icons |
+| **Backend API** | Python, Flask, Scapy |
+| **Machine Learning** | TensorFlow/Keras, Scikit-learn, CNN (CyberFedDefender dataset) |
 
-### Prerequisites
+---
 
-Ensure you have the following installed:
--   **Node.js** (v18 or higher)
--   **Python** (v3.9 or higher)
--   **Git**
+## Project Structure
 
-### 1. Clone the Repository
+This project adopts a clean structure separating the frontend interface and the AI-powered backend:
 
-```bash
-git clone https://github.com/jodypangaribuan/cyber-threat-detector.git
-cd cyber-threat-detector
+```text
+cyber-threat-detector/
+├── backend/               # Python/Flask Backend API and ML Models
+│   ├── app.py             # Main Flask server entry point
+│   ├── requirements.txt   # Python dependencies
+│   └── venv/              # Python virtual environment (ignored in git)
+├── src/                   # Next.js Frontend Application Source Code
+├── public/                # Static application assets (images, icons)
+│   ├── image.png          # Project banner / logo
+│   └── all_team.png       # Team image
+├── package.json           # Node.js dependencies and scripts
+└── README.md              # Main project guide & documentation file
 ```
 
-### 2. Backend Setup (Python API)
+---
+
+## How to Run the Application
+
+The CyberThreat Detector application in this repository is divided into 2 main component directories (Frontend Web at root and Backend in `backend/`).
+
+### System Prerequisites
+Ensure your operating system has the following installed:
+- [Node.js](https://nodejs.org/) (version 18 or higher)
+- [Python](https://www.python.org/) (version 3.9 or higher)
+- [Git](https://git-scm.com/)
+
+---
+
+### 1. Backend Setup (Python API)
 
 The backend handles the machine learning model and packet sniffing.
 
-1.  Navigate to the backend directory:
-    ```bash
-    cd backend
-    ```
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Create a virtual environment:
+   ```bash
+   # macOS/Linux
+   python3 -m venv venv
+   
+   # Windows
+   python -m venv venv
+   ```
+3. Activate the virtual environment:
+   ```bash
+   # macOS/Linux
+   source venv/bin/activate
+   
+   # Windows
+   venv\Scripts\activate
+   ```
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   *(Note: If you encounter issues installing `scapy` or `tensorflow`, ensure your pip is up to date: `pip install --upgrade pip`)*
+5. Run the Flask server:
+   ```bash
+   python app.py
+   ```
+   The backend server will start on **http://localhost:5001**.
 
-2.  Create a virtual environment:
-    ```bash
-    # macOS/Linux
-    python3 -m venv venv
-    
-    # Windows
-    python -m venv venv
-    ```
+> **⚠️ Important Note for Live Scanning**: 
+> To use the "Scan My Network" feature with full packet capture capabilities, you might need to run the backend with root/admin privileges (e.g., `sudo python app.py`). However, the app includes a smart fallback that works without root by analyzing your current connection metadata.
 
-3.  Activate the virtual environment:
-    ```bash
-    # macOS/Linux
-    source venv/bin/activate
-    
-    # Windows
-    venv\Scripts\activate
-    ```
+---
 
-4.  Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *Note: If you encounter issues installing `scapy` or `tensorflow`, ensure your pip is up to date: `pip install --upgrade pip`.*
+### 2. Frontend Setup (Next.js)
 
-5.  Run the Flask server:
-    ```bash
-    python app.py
-    ```
-    The server will start on **http://localhost:5001**.
+The frontend provides the interactive user interface.
 
-    > **⚠️ Important Note for Live Scanning**: 
-    > To use the "Scan My Network" feature with full packet capture capabilities, you might need to run the backend with root/admin privileges (e.g., `sudo python app.py`). However, the app includes a smart fallback that works without root by analyzing your current connection metadata.
-
-### 3. Frontend Setup (Next.js)
-
-The frontend provides the user interface.
-
-1.  Open a new terminal window and navigate to the project root (if you are in `backend`, go back one level):
-    ```bash
-    cd ..
-    ```
-
-2.  Install Node.js dependencies:
-    ```bash
-    npm install
-    ```
-
-3.  Run the development server:
-    ```bash
-    npm run dev
-    ```
-
-4.  Open your browser and visit:
-    **http://localhost:3000**
+1. Open a new terminal window and navigate to the project root:
+   ```bash
+   cd cyber-threat-detector
+   ```
+2. Install Node.js dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open your browser and visit: **http://localhost:3000**
 
 ---
 
@@ -117,16 +160,22 @@ The frontend provides the user interface.
     -   The backend runs on port `5001` (to avoid conflicts with macOS Control Center on port 5000).
     -   The frontend runs on port `3000`.
     -   If these ports are busy, you may need to kill the processes using them or change the ports in `app.py` and `package.json`.
-
 -   **Scapy Permissions**:
     -   If you see "Permission denied" errors in the backend console when scanning, it means `scapy` couldn't access the network interface. The app handles this gracefully by falling back to connection-based analysis, so the feature will still work!
 
-## 👥 Team
+## Development Team
 
--   **Jody Edriano Pangaribuan**
--   **Anjelika Simamora**
--   **Cheryl Lovica**
--   **Bowo Manalu**
--   **Chenith Siro**
+This platform was developed by:
+- **Jody Edriano Pangaribuan**
+- **Anjelika Simamora**
+- **Cheryl Lovica**
+- **Bowo Manalu**
+- **Chenith Siro**
 
-![Team](public/all_team.png)
+<p align="center">
+  <img src="public/all_team.png" alt="Team" width="800"/>
+</p>
+
+<br />
+
+> **License**: © 2026 CyberThreat Detector Team. All rights reserved.
