@@ -60,14 +60,18 @@ This project adopts a clean structure separating the frontend interface and the 
 
 ```text
 cyber-threat-detector/
-├── backend/               # Python/Flask Backend API and ML Models
-│   ├── app.py             # Main Flask server entry point
-│   ├── requirements.txt   # Python dependencies
-│   └── venv/              # Python virtual environment (ignored in git)
-├── src/                   # Next.js Frontend Application Source Code
+├── app/                   # Next.js App Router (Frontend Pages & Layouts)
+├── components/            # Reusable UI Components (shadcn/ui, etc.)
+├── backend/               # Python/Flask Backend API and Helper Scripts
+│   ├── app.py             # Main Flask server entry point & network sniffer
+│   ├── check_normal_stats.py # Utility script for checking normal stats
+│   └── requirements.txt   # Python dependencies
 ├── public/                # Static application assets (images, icons)
 │   ├── image.png          # Project banner / logo
 │   └── all_team.png       # Team image
+├── train.ipynb            # Jupyter Notebook for Training the CNN Model
+├── model.h5               # Trained Artificial Neural Network/CNN Model File
+├── cyberfeddefender_dataset.csv # The dataset used for model training
 ├── package.json           # Node.js dependencies and scripts
 └── README.md              # Main project guide & documentation file
 ```
